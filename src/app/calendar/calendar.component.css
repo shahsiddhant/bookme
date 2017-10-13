@@ -1,0 +1,19 @@
+
+.calendar-container{
+    display: flex;
+    width: 100%;
+
+}
+.day-container {
+
+    text-align: center;
+}
+
+.room-container {
+    display: flex;
+    width: 100%;
+
+}
+.room-container div{
+    margin: 0 25px;
+}
