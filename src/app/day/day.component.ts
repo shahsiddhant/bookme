@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-day',
@@ -7,9 +10,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DayComponent implements OnInit {
 
-  constructor() { }
+  private data = [{
+      "day": "Monday",
+      "room": [
+        101, 103, 113, 303, 313
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "room": [
+        101, 103, 113, 303, 313
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "room": [
+        101, 103, 113, 303, 313
+      ]
+    },
+    {
+      "day": "Thursday",
+      "room": [
+        101, 103, 113, 303, 313
+      ]
+    },
+    {
+      "day": "Friday",
+      "room": [
+        101, 103, 113, 303, 313
+      ]
+    }
+  ];
 
-  ngOnInit() {
-  }
+
+  constructor() {}
+
+  ngOnInit() {}
 
 }
