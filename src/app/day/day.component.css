@@ -6,7 +6,8 @@
 }
 
 .day-container {
-
+    background: #eee;
+    margin: 0 5px;
     text-align: center;
 }
 
@@ -15,9 +16,9 @@
     width: 100%;
 }
 
-.room-container div{
-    padding: 0 16px;
-    margin: 0 5px;
-
+.room-coloumn{
+    background: #ccc;
+    width: 50px;
+    margin: 0 7px;
     height: 95vh;
 }

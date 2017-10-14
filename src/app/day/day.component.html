@@ -2,9 +2,9 @@
   <div *ngFor="let day of data" class="day-container">
     <div class="title">{{day.day}}</div>
     <div  class="room-container">
-      <div *ngFor="let room of day.room">
+      <div class="room-coloumn" *ngFor="let room of day.room">
         {{room}}
-
+        <app-timeslot></app-timeslot>
       </div>
     </div>
   </div>

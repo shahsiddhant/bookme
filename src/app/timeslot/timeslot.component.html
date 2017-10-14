@@ -1,1 +1,1 @@
-<div class="timeslot"></div>
+<div class="timeslot" *ngFor="let timeslot of timeslots" [ngClass]="{'disabled': timeslot.booked}"></div>
