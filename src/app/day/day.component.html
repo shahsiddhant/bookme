@@ -1,8 +1,11 @@
-<div *ngFor= "let day in data">
-<div class="day-container">
+<div class="calendar-container">
+  <div *ngFor="let day of data" class="day-container">
     <div class="title">{{day.day}}</div>
-    <div *ngFor="let room in day.room" class="room-container">
-    <div>{{room}}</div>
-  </div>
+    <div  class="room-container">
+      <div *ngFor="let room of day.room">
+        {{room}}
+
+      </div>
+    </div>
   </div>
 </div>
