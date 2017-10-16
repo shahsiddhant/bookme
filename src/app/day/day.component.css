@@ -2,13 +2,13 @@
 .calendar-container{
     display: flex;
     width: 100%;
-
+    height: 100%;
 }
 
 .day-container {
-    background: #eee;
-    margin: 0 5px;
+    border-right: 1px solid #666;
     text-align: center;
+    width: 20%;
 }
 
 .room-container {
@@ -18,7 +18,23 @@
 
 .room-coloumn{
     background: #ccc;
-    width: 50px;
-    margin: 0 7px;
+    width: 20%;
+    border-right: 1px solid #eeeeee;
     height: 95vh;
 }
+
+.timeslot {
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    background-color: #DDDDDD;
+    border-bottom: 1px solid #ccc;
+}
+
+.timeslot:hover {
+    opacity: .8;
+}
+.booked {
+    background: #6A8EFE;
+}
+
