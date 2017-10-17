@@ -31,7 +31,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -39,7 +39,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -71,7 +71,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -103,7 +103,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -135,7 +135,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -168,7 +168,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -176,7 +176,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -192,7 +192,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -224,7 +224,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -240,7 +240,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -256,7 +256,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -293,7 +293,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -301,11 +301,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -313,7 +313,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -329,7 +329,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -345,7 +345,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -361,7 +361,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -377,7 +377,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -393,7 +393,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -409,7 +409,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -430,7 +430,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -438,11 +438,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -450,7 +450,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -466,7 +466,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -482,7 +482,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -498,7 +498,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -514,7 +514,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -530,7 +530,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -546,7 +546,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -567,7 +567,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -575,11 +575,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -587,7 +587,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -603,7 +603,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -619,7 +619,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -635,7 +635,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -651,7 +651,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -667,7 +667,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -683,7 +683,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -721,7 +721,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -729,7 +729,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -761,7 +761,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -793,7 +793,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -825,7 +825,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -858,7 +858,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -866,7 +866,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -882,7 +882,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -914,7 +914,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -930,7 +930,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -946,7 +946,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -983,7 +983,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -991,11 +991,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1003,7 +1003,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1019,7 +1019,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -1035,7 +1035,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -1051,7 +1051,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -1067,7 +1067,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -1083,7 +1083,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -1099,7 +1099,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -1120,7 +1120,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -1128,11 +1128,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1140,7 +1140,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1156,7 +1156,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -1172,7 +1172,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -1188,7 +1188,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -1204,7 +1204,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -1220,7 +1220,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -1236,7 +1236,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -1257,7 +1257,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -1265,11 +1265,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1277,7 +1277,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1293,7 +1293,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -1309,7 +1309,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -1325,7 +1325,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -1341,7 +1341,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -1357,7 +1357,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -1373,7 +1373,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -1411,7 +1411,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1419,7 +1419,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1451,7 +1451,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -1483,7 +1483,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -1515,7 +1515,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -1548,7 +1548,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1556,7 +1556,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1572,7 +1572,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -1604,7 +1604,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -1620,7 +1620,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -1636,7 +1636,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -1673,7 +1673,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -1681,11 +1681,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1693,7 +1693,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1709,7 +1709,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -1725,7 +1725,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -1741,7 +1741,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -1757,7 +1757,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -1773,7 +1773,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -1789,7 +1789,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -1810,7 +1810,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -1818,11 +1818,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1830,7 +1830,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1846,7 +1846,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -1862,7 +1862,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -1878,7 +1878,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -1894,7 +1894,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -1910,7 +1910,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -1926,7 +1926,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -1947,7 +1947,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -1955,11 +1955,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -1967,7 +1967,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -1983,7 +1983,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -1999,7 +1999,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -2015,7 +2015,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -2031,7 +2031,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -2047,7 +2047,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -2063,7 +2063,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -2101,7 +2101,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -2109,7 +2109,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -2141,7 +2141,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -2173,7 +2173,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -2205,7 +2205,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -2238,7 +2238,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -2246,7 +2246,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -2262,7 +2262,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -2294,7 +2294,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -2310,7 +2310,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -2326,7 +2326,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -2363,7 +2363,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -2371,11 +2371,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -2383,7 +2383,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -2399,7 +2399,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -2415,7 +2415,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -2431,7 +2431,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -2447,7 +2447,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -2463,7 +2463,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -2479,7 +2479,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -2500,7 +2500,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -2508,11 +2508,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -2520,7 +2520,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -2536,7 +2536,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -2552,7 +2552,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -2568,7 +2568,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -2584,7 +2584,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -2600,7 +2600,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -2616,7 +2616,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -2637,7 +2637,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -2645,11 +2645,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -2657,7 +2657,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -2673,7 +2673,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -2689,7 +2689,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -2705,7 +2705,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -2721,7 +2721,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -2737,7 +2737,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -2753,7 +2753,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -2791,7 +2791,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -2799,7 +2799,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -2831,7 +2831,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -2863,7 +2863,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -2895,7 +2895,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -2928,7 +2928,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -2936,7 +2936,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -2952,7 +2952,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -2984,7 +2984,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -3000,7 +3000,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -3016,7 +3016,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -3053,7 +3053,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -3061,11 +3061,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -3073,7 +3073,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -3089,7 +3089,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -3105,7 +3105,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -3121,7 +3121,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -3137,7 +3137,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -3153,7 +3153,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -3169,7 +3169,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -3190,7 +3190,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -3198,11 +3198,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -3210,7 +3210,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -3226,7 +3226,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -3242,7 +3242,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -3258,7 +3258,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -3274,7 +3274,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -3290,7 +3290,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -3306,7 +3306,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
@@ -3327,7 +3327,7 @@ export class DayComponent implements OnInit {
           'times': [
             {
               time: 900,
-              booked: true
+              booked: false
             },
             {
               time: 915,
@@ -3335,11 +3335,11 @@ export class DayComponent implements OnInit {
             },
             {
               time: 930,
-              booked: true
+              booked: false
             },
             {
               time: 945,
-              booked: true
+              booked: false
             },
             {
               time: 1000,
@@ -3347,7 +3347,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1015,
-              booked: true
+              booked: false
             },
             {
               time: 1030,
@@ -3363,7 +3363,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1115,
-              booked: true
+              booked: false
             },
             {
               time: 1130,
@@ -3379,7 +3379,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 1215,
-              booked: true
+              booked: false
             },
             {
               time: 1230,
@@ -3395,7 +3395,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 115,
-              booked: true
+              booked: false
             },
             {
               time: 130,
@@ -3411,7 +3411,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 215,
-              booked: true
+              booked: false
             },
             {
               time: 230,
@@ -3427,7 +3427,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 315,
-              booked: true
+              booked: false
             },
             {
               time: 330,
@@ -3443,7 +3443,7 @@ export class DayComponent implements OnInit {
             },
             {
               time: 415,
-              booked: true
+              booked: false
             },
             {
               time: 430,
