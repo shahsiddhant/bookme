@@ -3470,15 +3470,18 @@ export class DayComponent implements OnInit {
 
   }
 
-  bookSlot($event: any) {
+  bookSlot($event: any, i: any) {
     if ($event.target.classList.contains('booked')) {
       $event.target.classList.remove('booked');
-      $event.target.data.room.booked = false;
+      console.log(i);
+      console.log($event.target.attributes[5].value);
+      console.log($event.target.attributes[6].value);
     }
     else {
       $event.target.classList.add('booked');
-      $event.target.data.room.booked = true; //this doesnt work yet - basically pseudocode
-      console.log($event.target.data.room.booked);
+      console.log(i);
+      console.log($event.target.attributes[5].value);
+      console.log($event.target.attributes[6].value);
     }
   }
 }
