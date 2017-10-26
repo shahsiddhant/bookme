@@ -1,2 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-calendar></app-calendar>
+<!-- <app-calendar></app-calendar> -->
+<ul *ngFor="let week of weekData | async">
+    <li>
+        {{week.day}}
+    </li>
+    <li>
+        {{week.room.}}
+    </li>
+</ul>
