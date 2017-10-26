@@ -3,8 +3,11 @@
 <ul *ngFor="let week of weekData | async">
     <li>
         {{week.day}}
-    </li>
-    <li>
-        {{week.room.}}
+        <ul *ngFor="let rooms of roomData | async">
+            <li>
+                {{rooms.room}}
+            </li>
+        </ul>
     </li>
 </ul>
+
