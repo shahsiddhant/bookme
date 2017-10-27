@@ -43,12 +43,11 @@
 </div>
 <div *ngIf="showModal" class="save-modal">
   <div class="form-container">
-    <h2>Please fill this in</h2>
+    <h2>Book meeting:</h2>
 
-  <label for="name">Name</label>
+  <label for="name">Title</label>
   <input id="name" type="text">
-  <label for="description">Description</label>
-  <textarea id="description"></textarea>
+  <button class="save" (click)="showModal = !showModal">Save</button>
 </div>
 </div>
 <button class="book-me" (click)="showModal = !showModal">Book Me</button>

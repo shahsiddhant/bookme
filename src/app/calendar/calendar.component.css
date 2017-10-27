@@ -35,7 +35,8 @@ app-day {
 
 .book-me{
     background: none;
-    background-color: #99ffff;
+    background-color: #00DF73;
+    color: #fff;
     border: 0;
     border-radius: 30px;
     font-size: 15px;
@@ -43,6 +44,19 @@ app-day {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    box-shadow: 3px 3px 8px #666;
+}
+
+.save {
+    background: none;
+    background-color: #4F9DFB;
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .save-modal {
@@ -57,13 +71,15 @@ app-day {
     width: 17%;
     height: 27%;
     background: #f9f9f9;
-    border-radius: 30px;
+    border-radius: 6px;
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    box-shadow: 3px 3px 8px #999;
 }
 
 .form-container {
     margin: 0 auto;
-    width: 85%;
-
 }
 
 .save-modal label,

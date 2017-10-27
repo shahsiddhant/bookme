@@ -16,10 +16,11 @@
 }
 
 .room-coloumn{
-    background: #ccc;
+    background: #fff;
     width: 20%;
     border-right: 1px solid #eeeeee;
     height: 100%;
+    font-size: 14px;
 }
 
 .timeslot {
