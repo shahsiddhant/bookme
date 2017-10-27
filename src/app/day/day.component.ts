@@ -3474,12 +3474,14 @@ export class DayComponent implements OnInit {
     if ($event.target.classList.contains('booked')) {
       $event.target.classList.remove('booked');
       console.log(i);
+      console.log($event.target.attributes[4].value);
       console.log($event.target.attributes[5].value);
       console.log($event.target.attributes[6].value);
     }
     else {
       $event.target.classList.add('booked');
       console.log(i);
+      console.log($event.target.attributes[4].value);
       console.log($event.target.attributes[5].value);
       console.log($event.target.attributes[6].value);
     }

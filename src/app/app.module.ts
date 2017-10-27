@@ -7,6 +7,7 @@ import { DayComponent } from './day/day.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { SaveFormComponent } from './save-form/save-form.component';
 
 var config = {
   apiKey: "AIzaSyA8Ll1OmnuAzctmhfkxe3Xkze7lfaACAsQ",
@@ -21,7 +22,8 @@ var config = {
   declarations: [
     AppComponent,
     CalendarComponent,
-    DayComponent
+    DayComponent,
+    SaveFormComponent
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@
     <div  class="room-container">
       <div class="room-coloumn" *ngFor="let room of day.room">
         {{room.name}}
-        <div class="timeslot" *ngFor="let timeslot of room.times; let i = index" [attr.data-index]="i" [attr.data-room]="room.name" [attr.data-day]="day.day" (click)="bookSlot($event, i)" [ngClass]="{'booked': timeslot.booked}"></div>
+        <div class="timeslot" *ngFor="let timeslot of room.times; let i = index" [attr.data-index]="timeslot.time" [attr.data-room]="room.name" [attr.data-day]="day.day" (click)="bookSlot($event, i)" [ngClass]="{'booked': timeslot.booked}"></div>
       </div>
     </div>
   </div>
