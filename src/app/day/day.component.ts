@@ -10,7 +10,7 @@ import {
 })
 export class DayComponent implements OnInit {
 
-  private data = [
+  public data = [
     {
       "day": "Monday",
       "room": [
