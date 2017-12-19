@@ -1,7 +1,9 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-day',
@@ -15,7 +17,7 @@ export class DayComponent implements OnInit {
       "day": "Monday",
       "room": [
         {
-          'name':'101',
+          'name': '101',
           'times': [
             {
               time: 900,
@@ -152,7 +154,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'103',
+          'name': '103',
           'times': [
             {
               time: 900,
@@ -289,7 +291,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'113',
+          'name': '113',
           'times': [
             {
               time: 900,
@@ -426,7 +428,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'303',
+          'name': '303',
           'times': [
             {
               time: 900,
@@ -563,7 +565,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'313',
+          'name': '313',
           'times': [
             {
               time: 900,
@@ -705,7 +707,7 @@ export class DayComponent implements OnInit {
       "day": "Tuesday",
       "room": [
         {
-          'name':'101',
+          'name': '101',
           'times': [
             {
               time: 900,
@@ -842,7 +844,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'103',
+          'name': '103',
           'times': [
             {
               time: 900,
@@ -979,7 +981,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'113',
+          'name': '113',
           'times': [
             {
               time: 900,
@@ -1116,7 +1118,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'303',
+          'name': '303',
           'times': [
             {
               time: 900,
@@ -1253,7 +1255,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'313',
+          'name': '313',
           'times': [
             {
               time: 900,
@@ -1395,7 +1397,7 @@ export class DayComponent implements OnInit {
       "day": "Wednesday",
       "room": [
         {
-          'name':'101',
+          'name': '101',
           'times': [
             {
               time: 900,
@@ -1532,7 +1534,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'103',
+          'name': '103',
           'times': [
             {
               time: 900,
@@ -1669,7 +1671,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'113',
+          'name': '113',
           'times': [
             {
               time: 900,
@@ -1806,7 +1808,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'303',
+          'name': '303',
           'times': [
             {
               time: 900,
@@ -1943,7 +1945,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'313',
+          'name': '313',
           'times': [
             {
               time: 900,
@@ -2085,7 +2087,7 @@ export class DayComponent implements OnInit {
       "day": "Thursday",
       "room": [
         {
-          'name':'101',
+          'name': '101',
           'times': [
             {
               time: 900,
@@ -2222,7 +2224,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'103',
+          'name': '103',
           'times': [
             {
               time: 900,
@@ -2359,7 +2361,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'113',
+          'name': '113',
           'times': [
             {
               time: 900,
@@ -2496,7 +2498,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'303',
+          'name': '303',
           'times': [
             {
               time: 900,
@@ -2633,7 +2635,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'313',
+          'name': '313',
           'times': [
             {
               time: 900,
@@ -2775,7 +2777,7 @@ export class DayComponent implements OnInit {
       "day": "Friday",
       "room": [
         {
-          'name':'101',
+          'name': '101',
           'times': [
             {
               time: 900,
@@ -2912,7 +2914,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'103',
+          'name': '103',
           'times': [
             {
               time: 900,
@@ -3049,7 +3051,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'113',
+          'name': '113',
           'times': [
             {
               time: 900,
@@ -3186,7 +3188,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'303',
+          'name': '303',
           'times': [
             {
               time: 900,
@@ -3323,7 +3325,7 @@ export class DayComponent implements OnInit {
           ]
         },
         {
-          'name':'313',
+          'name': '313',
           'times': [
             {
               time: 900,
@@ -3462,12 +3464,30 @@ export class DayComponent implements OnInit {
       ]
     }
   ];
+  timesCol: AngularFirestoreCollection<any>;
+
+  timesObs: Observable<any>;
+  public timesData;
 
 
-  constructor() {}
-    objectKeys = Object.keys;
+  constructor(private afs: AngularFirestore, private http: HttpClient) { }
+  objectKeys = Object.keys;
   ngOnInit() {
+    this.timesCol = this.afs.collection('week').doc('1').collection('Tuesday').doc('301').collection('times');
+    this.timesObs = this.timesCol.valueChanges();
+    this.timesObs.subscribe(data => {
+      // this.timesData = data;
+      // console.log(data);
+    })
 
+    this.getData().subscribe(res => {
+      console.log('res', res);
+    })
+
+  }
+
+  getData(): Observable<any> {
+    return this.http.get('https://firestore.googleapis.com/v1beta1/projects/bookme-11e75/databases/(default)/documents/week/1/Monday/101/times/0900');
   }
 
   bookSlot($event: any, i: any) {
@@ -3476,14 +3496,14 @@ export class DayComponent implements OnInit {
       console.log(i);
       console.log($event.target.attributes[4].value);
       console.log($event.target.attributes[5].value);
-      console.log($event.target.attributes[6].value);
+      // console.log($event.target.attributes[6].value);
     }
     else {
       $event.target.classList.add('booked');
       console.log(i);
       console.log($event.target.attributes[4].value);
       console.log($event.target.attributes[5].value);
-      console.log($event.target.attributes[6].value);
+      // console.log($event.target.attributes[6].value);
     }
   }
 }
