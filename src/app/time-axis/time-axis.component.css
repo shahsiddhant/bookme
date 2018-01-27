@@ -1,0 +1,13 @@
+.time-axis {
+    width: 100%;
+    display: inline-block;
+}
+.time-stamp {
+    height: 30px;
+    padding-top: 10px;
+    widows: 100%;
+    border-bottom: 1px solid #cccccc;
+}
+.hour {
+    border-top: 1px solid #333;
+}
