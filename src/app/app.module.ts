@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -6,12 +7,15 @@ import { AppComponent } from './app.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DayComponent } from './day/day.component';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+// import { AngularFireModule } from 'angularfire2';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { SaveFormComponent } from './save-form/save-form.component';
 import { TimeAxisComponent } from './time-axis/time-axis.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule, MatInputModule  } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { TimeslotComponent } from './timeslot/timeslot.component';
+
 
 // let config = {
 //   apiKey: 'AIzaSyA8Ll1OmnuAzctmhfkxe3Xkze7lfaACAsQ',
@@ -30,17 +34,24 @@ import { MatDatepickerModule } from '@angular/material';
     CalendarComponent,
     DayComponent,
     SaveFormComponent,
-    TimeAxisComponent
+    TimeAxisComponent,
+    TimeslotComponent
   ],
   exports: [
     MatDatepickerModule
   ],
   imports: [
     BrowserModule,
-    AngularFirestoreModule,
-    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    // AngularFirestoreModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
