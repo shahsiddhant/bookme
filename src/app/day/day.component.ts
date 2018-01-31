@@ -1,21 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-// import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { Component, EventEmitter, OnInit, Output, Input, OnChanges } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+
+import { RoomService } from '../shared/services/room.service';
+import { SimpleChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-day',
   templateUrl: './day.component.html',
   styleUrls: ['./day.component.css']
 })
-export class DayComponent implements OnInit {
+export class DayComponent implements OnInit, OnChanges {
   /*
     public data = [
       {
-        "day": "Monday",
-        "room": [
+        'day': 'Monday',
+        'room': [
           {
             'name': '101',
             'times': [
@@ -704,8 +706,8 @@ export class DayComponent implements OnInit {
         ]
       },
       {
-        "day": "Tuesday",
-        "room": [
+        'day': 'Tuesday',
+        'room': [
           {
             'name': '101',
             'times': [
@@ -1394,8 +1396,8 @@ export class DayComponent implements OnInit {
         ]
       },
       {
-        "day": "Wednesday",
-        "room": [
+        'day': 'Wednesday',
+        'room': [
           {
             'name': '101',
             'times': [
@@ -2084,8 +2086,8 @@ export class DayComponent implements OnInit {
         ]
       },
       {
-        "day": "Thursday",
-        "room": [
+        'day': 'Thursday',
+        'room': [
           {
             'name': '101',
             'times': [
@@ -2774,8 +2776,8 @@ export class DayComponent implements OnInit {
         ]
       },
       {
-        "day": "Friday",
-        "room": [
+        'day': 'Friday',
+        'room': [
           {
             'name': '101',
             'times': [
@@ -3466,183 +3468,178 @@ export class DayComponent implements OnInit {
     ];
 
     */
-  // timesCol: AngularFirestoreCollection<any>;
 
-  public rooms = ['16101', '16103', '16113', '16303', '16303'];
+  @Output() roomSelected: EventEmitter<any> = new EventEmitter();
+  private options = {
+    weekday: 'long', year: 'numeric', month: 'short',
+    day: 'numeric'
+  };
+  @Input() displayDate;
+
+  // TODO - get these from the API
+  public rooms = ['16101', '16103', '16113', '16303', '16313'];
 
   public timeSlots = [
     {
-      time: 900,
+      time: '09:00',
       booked: false
     },
     {
-      time: 915,
+      time: '09:15',
       booked: false
     },
     {
-      time: 930,
+      time: '09:30',
       booked: false
     },
     {
-      time: 945,
+      time: '09:45',
       booked: false
     },
     {
-      time: 1000,
+      time: '10:00',
       booked: false
     },
     {
-      time: 1015,
+      time: '10:15',
       booked: false
     },
     {
-      time: 1030,
+      time: '10:30',
       booked: false
     },
     {
-      time: 1045,
+      time: '10:45',
       booked: false
     },
     {
-      time: 1100,
+      time: '11:00',
       booked: false
     },
     {
-      time: 1115,
+      time: '11:15',
       booked: false
     },
     {
-      time: 1130,
+      time: '11:30',
       booked: false
     },
     {
-      time: 1145,
+      time: '11:45',
       booked: false
     },
     {
-      time: 1200,
+      time: '12:00',
       booked: false
     },
     {
-      time: 1215,
+      time: '12:15',
       booked: false
     },
     {
-      time: 1230,
+      time: '12:30',
       booked: false
     },
     {
-      time: 1245,
+      time: '12:45',
       booked: false
     },
     {
-      time: 100,
+      time: '13:00',
       booked: false
     },
     {
-      time: 115,
+      time: '13:15',
       booked: false
     },
     {
-      time: 130,
+      time: '13:30',
       booked: false
     },
     {
-      time: 145,
+      time: '13:45',
       booked: false
     },
     {
-      time: 200,
+      time: '14:00',
       booked: false
     },
     {
-      time: 215,
+      time: '14:15',
       booked: false
     },
     {
-      time: 230,
+      time: '14:30',
       booked: false
     },
     {
-      time: 245,
+      time: '14:45',
       booked: false
     },
     {
-      time: 300,
+      time: '15:00',
       booked: false
     },
     {
-      time: 315,
+      time: '15:15',
       booked: false
     },
     {
-      time: 330,
+      time: '15:30',
       booked: false
     },
     {
-      time: 345,
+      time: '15:45',
       booked: false
     },
     {
-      time: 400,
+      time: '16:00',
       booked: false
     },
     {
-      time: 415,
+      time: '16:15',
       booked: false
     },
     {
-      time: 430,
+      time: '16:30',
       booked: false
     },
     {
-      time: 445,
+      time: '16:45',
       booked: false
     },
     {
-      time: 500,
+      time: '17:00',
       booked: false
     }
-  ]
-
-
-
-
+  ];
 
   constructor(
-    // private afs: AngularFirestore,
-    private http: HttpClient) { }
-  objectKeys = Object.keys;
+    private http: HttpClient,
+    private roomService: RoomService) { }
+
   ngOnInit() {
-    // this.timesCol = this.afs.collection('week').doc('1').collection('Tuesday').doc('301').collection('times');
-    // this.timesObs = this.timesCol.valueChanges();
-    // this.timesObs.subscribe(data => {
-    // this.timesData = data;
-    // console.log(data);
-    // })
+    this.displayDate = new Date(this.displayDate).toLocaleDateString('en-US', this.options);
 
-    //   this.getData().subscribe(res => {
-    //     console.log('res', res);
-    //   })
+    this.roomService.getRooms().subscribe( res => {
+      this.rooms = res.rooms;
+      console.log(this.rooms);
+    });
 
-    // }
-
-    // getData(): Observable<any> {
   }
 
-  bookSlot($event: any, i: any) {
-    if ($event.target.classList.contains('booked')) {
-      $event.target.classList.remove('booked');
-      console.log(i);
-      console.log($event.target.attributes[4].value);
-      console.log($event.target.attributes[5].value);
-      // console.log($event.target.attributes[6].value);
-    } else {
-      $event.target.classList.add('booked');
-      console.log(i);
-      console.log($event.target.attributes[4].value);
-      console.log($event.target.attributes[5].value);
-      // console.log($event.target.attributes[6].value);
+  ngOnChanges(changes: SimpleChanges) {
+    for (const propName in changes) {
+      if (propName === 'displayDate') {
+        this.displayDate = new Date(this.displayDate).toLocaleDateString('en-US', this.options);
+      }
     }
+  }
+
+  collectData(event) {
+    this.roomService.room = event.room;
+    this.roomService.startTime = event.time;
+    this.roomSelected.emit(true);
+    // this.showModal = !this.showModal;
   }
 }

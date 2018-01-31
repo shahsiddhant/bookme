@@ -15,15 +15,17 @@
 <div class="calendar-container">
   <div class="day-container">
     <div class="title">
-      Monday, January 30th, 2018
+      {{displayDate}}
       <div class="room-container">
         <div class="room-coloumn" *ngFor="let room of rooms">
           {{room}}
           <div class="timeslot" *ngFor="let timeslot of timeSlots">
-            <app-timeslot [metaData]="timeslot"></app-timeslot>
+            <app-timeslot (selected)="collectData($event)" [room]="room" [metaData]="timeslot"></app-timeslot>
           </div>"
         </div>
       </div>
     </div>
   </div>
 </div>
+
+

@@ -1,9 +1,31 @@
 <div class="save-modal">
   <div class="form-container">
+    <div (click)="modalClose()">X</div>
     <h2>Book meeting:</h2>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Description" [(ngModel)]="desc" [formControl]="descriptionControl" required>
+      <mat-error *ngIf="descriptionControl.hasError('required')">You must enter something</mat-error>
+    </mat-form-field>
 
-    <label for="name">Title</label>
-    <input id="name" type="text">
-    <button class="save">Save</button>
+    <div class="time-selectors">
+      <mat-form-field>
+        <mat-select placeholder="Start Time" [(ngModel)]="startTime" [formControl]="startControl" required>
+          <mat-option *ngFor="let time of timeSlots" [value]="time.time">
+            {{ time.time }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="startControl.hasError('required')">You must make a selection</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="End Time" [formControl]="endControl" [(ngModel)]="endTime" required>
+          <mat-option *ngFor="let time of timeSlots" [value]="time.time">
+            {{ time.time }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="endControl.hasError('required')">You must make a selection</mat-error>
+      </mat-form-field>
+    </div>
+    <button class="save" (click)="saveInfo()">Save</button>
   </div>
 </div>

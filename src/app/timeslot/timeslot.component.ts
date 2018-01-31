@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-timeslot',
@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TimeslotComponent implements OnInit {
   @Input() metaData;
+  @Input() room;
+  @Output() selected: EventEmitter<any> = new EventEmitter();;
   public showModal: boolean;
   constructor() { }
 
@@ -15,9 +17,13 @@ export class TimeslotComponent implements OnInit {
 
   timeslotClicked() {
     // emit the metadata to the parent back to use
+    const data = {
+      'room': this.room,
+      'time': this.metaData.time
+    };
+    this.selected.emit(data);
+    // console.log(this.room);
 
-    // console.log(this.metaData);
-    // this.showModal = !this.showModal;
   }
 
 }

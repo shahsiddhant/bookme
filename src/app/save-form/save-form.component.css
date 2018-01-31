@@ -1,44 +1,35 @@
-
-.save {
-    background: none;
-    background-color: #4F9DFB;
-    color: #fff;
-    border: 0;
-    border-radius: 30px;
-    font-size: 15px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .save-modal {
-    font-family: sans-serif;
-    position: fixed;
-    z-index: 10;
-    height: 100%;
-    width: 100%;
-    background: #999;
-    box-shadow: 3px 3px 8px #999;
+  font-family: sans-serif;
+  position: fixed;
+  /* z-index: 10; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.7);
+  box-shadow: 3px 3px 8px #999;
 }
 
 .form-container {
-    margin: 0 auto;
-    width: 300px;
-    height: 200px;
-    background: #f9f9f9;
+  margin: 30vh auto;
+  width: 400px;
+  border-radius: 5px;
+  padding: 30px;
+  background: #f9f9f9;
 }
 
-.save-modal label,
-.save-modal input {
-    margin: 10px 0;
-    display: block;
+.save {
+  background: none;
+  background-color: #4F9DFB;
+  color: #fff;
+  border: 0;
+  border-radius: 30px;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.save-modal input {
-    padding: 10px;
-}
-
-#description{
-    width: 230px;
-    height: 60px;
+.time-selectors {
+    display: inline-block;
 }

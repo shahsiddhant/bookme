@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,10 +12,11 @@ import { DayComponent } from './day/day.component';
 import { SaveFormComponent } from './save-form/save-form.component';
 import { TimeAxisComponent } from './time-axis/time-axis.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatDatepickerModule, MatNativeDateModule, MatInputModule  } from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule, MatInputModule, MatSelectModule, MatButtonModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TimeslotComponent } from './timeslot/timeslot.component';
-
+import { RoomService } from './shared/services/room.service';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 // let config = {
 //   apiKey: 'AIzaSyA8Ll1OmnuAzctmhfkxe3Xkze7lfaACAsQ',
@@ -50,10 +51,12 @@ import { TimeslotComponent } from './timeslot/timeslot.component';
     MatInputModule,
     BrowserAnimationsModule,
     // AngularFirestoreModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    MatButtonModule
 
   ],
-  providers: [],
+  providers: [RoomService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
