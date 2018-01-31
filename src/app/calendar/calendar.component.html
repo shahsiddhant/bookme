@@ -11,13 +11,5 @@
 <div class="right-pane">
   <app-day></app-day>
 </div>
-<div *ngIf="showModal" class="save-modal">
-  <div class="form-container">
-    <h2>Book meeting:</h2>
 
-    <label for="name">Title</label>
-    <input id="name" type="text">
-    <button class="save" (click)="showModal = !showModal">Save</button>
-  </div>
-</div>
 <button class="book-me" (click)="showModal = !showModal">Book Me</button>
