@@ -11,12 +11,18 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  public getData = false;
   constructor(private cookieService: CookieService) { }
   ngOnInit() {
-    if (!this.cookieService.get('owner')) {
+    if (!this.cookieService.get('firstName') || !this.cookieService.get('lastName') ) {
       // TODO - Ask for user info.
+      this.getData = true;
       // this.cookieService.put('owner', 'Sid Shah');
     }
+  }
+
+  closeModal(event) {
+    this.getData = !event;
   }
 }
 

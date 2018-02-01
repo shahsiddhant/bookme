@@ -22,7 +22,7 @@ export class RoomService {
     const path = 'http://xmmtg-mit-a1d.sys.comcast.net:8080/reservation';
     const body = {
       'id': Math.floor(Math.random() * 1000000),
-      'owner': this.cookieService.get('owner'),
+      'owner': this.cookieService.get('firstName') + ' ' + this.cookieService.get('lastName'),
       'startTime': new Date(this.date + ' ' + this.startTime).toISOString(),
       'endTime': new Date(this.date + ' ' + this.endTime).toISOString(),
       'room': this.room,

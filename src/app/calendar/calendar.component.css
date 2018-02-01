@@ -13,6 +13,7 @@ app-day {
     width: 87%;
     display: inline-block;
     position: absolute;
+    padding: 30px;
 }
 
 .book-me{

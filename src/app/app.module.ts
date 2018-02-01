@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { TimeslotComponent } from './timeslot/timeslot.component';
 import { RoomService } from './shared/services/room.service';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { StartPromptComponent } from './start-prompt/start-prompt.component';
 
 // let config = {
 //   apiKey: 'AIzaSyA8Ll1OmnuAzctmhfkxe3Xkze7lfaACAsQ',
@@ -36,7 +37,8 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
     DayComponent,
     SaveFormComponent,
     TimeAxisComponent,
-    TimeslotComponent
+    TimeslotComponent,
+    StartPromptComponent
   ],
   exports: [
     MatDatepickerModule

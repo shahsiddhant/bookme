@@ -1,0 +1,21 @@
+<div class="modal-container">
+  <div class="modal">
+    <h2>Please enter your name. </h2>
+    <p>This will be stored in a cookie and used for all future reservations.</p>
+    <form action="">
+      <div class="inline">
+        <mat-form-field>
+          <input matInput type="text" placeholder="First Name" [(ngModel)]="firstName" [formControl]="firstNameControl" required>
+          <mat-error *ngIf="firstNameControl.hasError('required')">You must enter something</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="text" placeholder="Last Name" [(ngModel)]="lastName" [formControl]="lastNameControl" required>
+          <mat-error *ngIf="lastNameControl.hasError('required')">You must enter something</mat-error>
+        </mat-form-field>
+      </div>
+
+      <button type="submit" value="Save" class="save" (click)="saveInfo()">Save</button>
+    </form>
+  </div>
+</div>

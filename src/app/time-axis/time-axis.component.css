@@ -3,9 +3,10 @@
     display: inline-block;
 }
 .time-stamp {
-    height: 30px;
-    padding-top: 10px;
-    widows: 100%;
+    height: 100;
+    padding: 20px 0;
+    margin: auto 0;
+    width: 100%;
     border-bottom: 1px solid #cccccc;
 }
 .hour {
