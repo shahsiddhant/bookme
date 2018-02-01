@@ -31,3 +31,9 @@
 .time-selectors {
     display: inline-block;
 }
+
+.close {
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+}

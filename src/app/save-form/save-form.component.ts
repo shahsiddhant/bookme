@@ -114,6 +114,11 @@ export class SaveFormComponent implements OnInit {
     }
   ];
   public desc: string = null;
+  public displayDate;
+  private options = {
+    weekday: 'long', year: 'numeric', month: 'short',
+    day: 'numeric'
+  };
 
   descriptionControl = new FormControl('', [Validators.required]);
   startControl = new FormControl('', [Validators.required]);
@@ -123,6 +128,7 @@ export class SaveFormComponent implements OnInit {
 
   ngOnInit() {
     this.endTime = this.startTime;
+    this.displayDate = this.roomService.displayDate;
   }
   modalClose() {
     this.closeModal.emit(false);
@@ -136,9 +142,6 @@ export class SaveFormComponent implements OnInit {
     this.roomService.postMeeting().subscribe(res => {
       console.log(res);
       this.closeModal.emit(false);
-    }, err => {
-      // Fail block, show an error message
-      console.log('Failed, retry');
     });
   }
 }

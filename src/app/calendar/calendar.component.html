@@ -8,7 +8,7 @@
   </div>
   <app-time-axis></app-time-axis>
 </div>
-<div class="right-pane">
-  <app-day [displayDate]="displayDate" (roomSelected)="showHideModal($event)"></app-day>
+<div *ngIf="dataLoaded" class="right-pane">
+  <app-day  [reservations]="reservations" [displayDate]="displayDate" (roomSelected)="showHideModal($event)"></app-day>
 </div>
 <app-save-form (closeModal)="showHideModal($event)" *ngIf="showModal" [startTime]="startTime"></app-save-form>

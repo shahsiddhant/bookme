@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { RequestOptions } from 'http';
 
 
 @Injectable()
@@ -15,11 +16,14 @@ export class RoomService {
   public room: string = null;
   public desc: string = null;
   public date: string = null;
+  public reservations = [];
+  public displayDate;
+  private baseUrl = 'http://xmmtg-mit-a1d.sys.comcast.net:8080';
 
   constructor(private httpClient: HttpClient, private cookieService: CookieService) { }
 
   postMeeting(): Observable<any> {
-    const path = 'http://xmmtg-mit-a1d.sys.comcast.net:8080/reservation';
+    const path = this.baseUrl + '/reservation';
     const body = {
       'id': Math.floor(Math.random() * 1000000),
       'owner': this.cookieService.get('firstName') + ' ' + this.cookieService.get('lastName'),
@@ -29,11 +33,21 @@ export class RoomService {
       'desc': this.desc
     };
     console.log(body);
-    return this.httpClient.post(path, body);
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    headers.append('', 'text');
+    return this.httpClient.post(path, body, { headers, responseType: 'text' });
   }
 
   getRooms(): Observable<any> {
-    const path = 'http://xmmtg-mit-a1d.sys.comcast.net:8080/rooms';
-    return this.httpClient.get(path);
+    const path = this.baseUrl + '/rooms';
+    const headers = new HttpHeaders().set('Accept', 'application/json');
+
+    return this.httpClient.get(path, { headers });
+  }
+
+  getReservationsByRoomByDate(room: string, date: string): Observable<any> {
+    const path = this.baseUrl + `/schedule/${room}/date/${date}`;
+    const headers = new HttpHeaders().set('Accept', 'application/json');
+    return this.httpClient.get(path, { headers });
   }
 }

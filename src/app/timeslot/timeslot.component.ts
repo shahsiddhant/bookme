@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class TimeslotComponent implements OnInit {
   @Input() metaData;
   @Input() room;
+  @Input() booked;
   @Output() selected: EventEmitter<any> = new EventEmitter();;
   public showModal: boolean;
   constructor() { }
@@ -25,5 +26,4 @@ export class TimeslotComponent implements OnInit {
     // console.log(this.room);
 
   }
-
 }

@@ -1,7 +1,8 @@
 <div class="save-modal">
   <div class="form-container">
-    <div (click)="modalClose()">X</div>
-    <h2>Book meeting:</h2>
+    <div class="close" (click)="modalClose()">X</div>
+    <h3 class="m-0">Book meeting for</h3>
+    <h2 class="m-0"> {{displayDate}}</h2>
     <mat-form-field>
       <input matInput type="text" placeholder="Description" [(ngModel)]="desc" [formControl]="descriptionControl" required>
       <mat-error *ngIf="descriptionControl.hasError('required')">You must enter something</mat-error>
