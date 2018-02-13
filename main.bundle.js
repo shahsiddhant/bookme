@@ -394,22 +394,22 @@ var DayComponent = /** @class */ (function () {
         this.timeSlots = [
             {
                 data: null,
-                time: '09:00',
+                time: '9:00',
                 booked: false
             },
             {
                 data: null,
-                time: '09:15',
+                time: '9:15',
                 booked: false
             },
             {
                 data: null,
-                time: '09:30',
+                time: '9:30',
                 booked: false
             },
             {
                 data: null,
-                time: '09:45',
+                time: '9:45',
                 booked: false
             },
             {
@@ -587,7 +587,7 @@ var DayComponent = /** @class */ (function () {
             if (propName === 'displayDate') {
                 this_1.displayDate = new Date(this_1.displayDate).toLocaleDateString('en-US', this_1.options);
             }
-            else if (propName === 'reservations') {
+            else if (propName === 'reservation') {
                 var booked_1 = false;
                 this_1.reservation.reservation.scheduleDetails.forEach(function (item) {
                     _this.timeSlots.forEach(function (time) {
@@ -1296,7 +1296,7 @@ var TimeslotComponent = /** @class */ (function () {
         // emit the metadata to the parent back to use
         var data = {
             'room': this.room,
-            'time': this.metaData.time,
+            'time': this.metaData.time.length === 4 ? '0' + this.metaData.time : this.metaData.time,
             'booked': this.metaData.booked,
             'id': this.metaData.data ? this.metaData.data.id : null
         };
