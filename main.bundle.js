@@ -300,14 +300,19 @@ var CalendarComponent = /** @class */ (function () {
             _this.roomService.getReservationsByRoomByDate(room, _this.roomService.date).subscribe(function (res) {
                 _this.reservation = new __WEBPACK_IMPORTED_MODULE_4__shared_services_schedule__["a" /* Schedule */](res);
                 _this.reservations.push({
-                    'room': room,
+                    'room': parseInt(room, 10),
                     'reservation': _this.reservation
                 });
                 _this.roomService.reservations.push({
-                    'room': room,
+                    'room': parseInt(room, 10),
                     'reservation': _this.reservation
                 });
-                _this.dataLoaded = _this.reservations.length === _this.rooms.length;
+                if (_this.reservations.length === _this.rooms.length) {
+                    _this.reservations.sort(function (a, b) {
+                        return a.room - b.room;
+                    });
+                    _this.dataLoaded = true;
+                }
             });
         });
     };
@@ -773,7 +778,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/save-form/save-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"save-modal\">\n  <div class=\"form-container\">\n    <div class=\"close\" (click)=\"modalClose()\">X</div>\n    <h3 class=\"m-0\">Book meeting for Room {{room}} on</h3>\n    <h2 class=\"m-0\"> {{displayDate}}</h2>\n    <mat-form-field>\n      <input matInput type=\"text\" placeholder=\"Description\" [(ngModel)]=\"desc\" [formControl]=\"descriptionControl\" required>\n      <mat-error *ngIf=\"descriptionControl.hasError('required')\">You must enter something</mat-error>\n    </mat-form-field>\n\n    <div class=\"time-selectors\">\n      <mat-form-field>\n        <mat-select placeholder=\"Start Time\" [(ngModel)]=\"startTime\" [formControl]=\"startControl\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"startControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n\n      <mat-form-field>\n        <mat-select placeholder=\"End Time\" [formControl]=\"endControl\" [(ngModel)]=\"endTime\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"endControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n    </div>\n    <button class=\"save\" (click)=\"saveInfo()\">Save</button>\n    <div class=\"error-message\" *ngIf=\"showErrorMessage\">\n      Error occoured, Please try again: {{errorMessage}}\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"save-modal\">\n  <div class=\"form-container\">\n    <div class=\"close\" (click)=\"modalClose()\">X</div>\n    <h3 class=\"m-0\">Book meeting for Room {{room}} on</h3>\n    <h2 class=\"m-0\"> {{displayDate}}</h2>\n    <mat-form-field>\n      <input matInput maxlength=\"30\" type=\"text\" placeholder=\"Description\" [(ngModel)]=\"desc\" [formControl]=\"descriptionControl\" required>\n      <mat-error *ngIf=\"descriptionControl.hasError('required')\">You must enter something</mat-error>\n    </mat-form-field>\n\n    <div class=\"time-selectors\">\n      <mat-form-field>\n        <mat-select placeholder=\"Start Time\" [(ngModel)]=\"startTime\" [formControl]=\"startControl\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"startControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n\n      <mat-form-field>\n        <mat-select placeholder=\"End Time\" [formControl]=\"endControl\" [(ngModel)]=\"endTime\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"endControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n    </div>\n    <button class=\"save\" (click)=\"saveInfo()\">Save</button>\n    <div class=\"error-message\" *ngIf=\"showErrorMessage\">\n      Error occoured, Please try again: {{errorMessage}}\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -996,7 +1001,7 @@ var RoomService = /** @class */ (function () {
             'owner': this.cookieService.get('firstName') + ' ' + this.cookieService.get('lastName'),
             'startTime': new Date(this.date + ' ' + this.startTime).toISOString(),
             'endTime': new Date(this.date + ' ' + this.endTime).toISOString(),
-            'room': this.room,
+            'room': this.room.toString(),
             'desc': this.desc
         };
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Content-Type', 'application/json');
