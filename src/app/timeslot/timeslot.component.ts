@@ -22,7 +22,7 @@ export class TimeslotComponent implements OnInit {
 
     const data = {
       'room': this.room,
-      'time': this.metaData.time,
+      'time': this.metaData.time.length === 4 ? '0' + this.metaData.time : this.metaData.time,
       'booked': this.metaData.booked,
       'id': this.metaData.data ? this.metaData.data.id : null
     };

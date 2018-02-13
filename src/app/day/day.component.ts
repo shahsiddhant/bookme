@@ -28,23 +28,23 @@ export class DayComponent implements OnInit, OnChanges {
   public timeSlots = [
     {
       data: null,
-      time: '09:00',
+      time: '9:00',
       booked: false
 
     },
     {
       data: null,
-      time: '09:15',
+      time: '9:15',
       booked: false
     },
     {
       data: null,
-      time: '09:30',
+      time: '9:30',
       booked: false
     },
     {
       data: null,
-      time: '09:45',
+      time: '9:45',
       booked: false
     },
     {
@@ -225,7 +225,7 @@ export class DayComponent implements OnInit, OnChanges {
     for (const propName in changes) {
       if (propName === 'displayDate') {
         this.displayDate = new Date(this.displayDate).toLocaleDateString('en-US', this.options);
-      } else if (propName === 'reservations') {
+      } else if (propName === 'reservation') {
 
         let booked = false;
         this.reservation.reservation.scheduleDetails.forEach(item => {
