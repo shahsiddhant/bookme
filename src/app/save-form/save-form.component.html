@@ -28,5 +28,8 @@
       </mat-form-field>
     </div>
     <button class="save" (click)="saveInfo()">Save</button>
+    <div class="error-message" *ngIf="showErrorMessage">
+      Error occoured, Please try again: {{errorMessage}}
+    </div>
   </div>
 </div>

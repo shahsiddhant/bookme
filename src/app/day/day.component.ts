@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 
 import { RoomService } from '../shared/services/room.service';
 import { SimpleChanges } from '@angular/core/src/metadata/lifecycle_hooks';
+import { TimeslotService } from '../shared/services/timeslot.service';
 
 @Component({
   selector: 'app-day',
@@ -15,7 +16,7 @@ import { SimpleChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 export class DayComponent implements OnInit, OnChanges {
   @Output() roomSelected: EventEmitter<any> = new EventEmitter();
   @Input() displayDate;
-  @Input() reservations;
+  @Input() reservation;
   private options = {
     weekday: 'long', year: 'numeric', month: 'short',
     day: 'numeric'
@@ -26,134 +27,168 @@ export class DayComponent implements OnInit, OnChanges {
   public rooms = ['16101', '16103', '16113', '16303', '16313'];
   public timeSlots = [
     {
+      data: null,
       time: '09:00',
       booked: false
+
     },
     {
+      data: null,
       time: '09:15',
       booked: false
     },
     {
+      data: null,
       time: '09:30',
       booked: false
     },
     {
+      data: null,
       time: '09:45',
       booked: false
     },
     {
+      data: null,
       time: '10:00',
       booked: false
     },
     {
+      data: null,
       time: '10:15',
       booked: false
     },
     {
+      data: null,
       time: '10:30',
       booked: false
     },
     {
+      data: null,
       time: '10:45',
       booked: false
     },
     {
+      data: null,
       time: '11:00',
       booked: false
     },
     {
+      data: null,
       time: '11:15',
-      booked: true
+      booked: false
     },
     {
+      data: null,
       time: '11:30',
-      booked: true
+      booked: false
     },
     {
+      data: null,
       time: '11:45',
       booked: false
     },
     {
+      data: null,
       time: '12:00',
       booked: false
     },
     {
+      data: null,
       time: '12:15',
       booked: false
     },
     {
+      data: null,
       time: '12:30',
       booked: false
     },
     {
+      data: null,
       time: '12:45',
       booked: false
     },
     {
+      data: null,
       time: '13:00',
       booked: false
     },
     {
+      data: null,
       time: '13:15',
       booked: false
     },
     {
+      data: null,
       time: '13:30',
-      booked: true
+      booked: false
     },
     {
+      data: null,
       time: '13:45',
       booked: false
     },
     {
+      data: null,
       time: '14:00',
       booked: false
     },
     {
+      data: null,
       time: '14:15',
       booked: false
     },
     {
+      data: null,
       time: '14:30',
       booked: false
     },
     {
+      data: null,
       time: '14:45',
       booked: false
     },
     {
+      data: null,
       time: '15:00',
       booked: false
     },
     {
+      data: null,
       time: '15:15',
       booked: false
     },
     {
+      data: null,
       time: '15:30',
       booked: false
     },
     {
+      data: null,
       time: '15:45',
       booked: false
     },
     {
+      data: null,
       time: '16:00',
       booked: false
     },
     {
+      data: null,
       time: '16:15',
       booked: false
     },
     {
+      data: null,
       time: '16:30',
       booked: false
     },
     {
+      data: null,
       time: '16:45',
       booked: false
     },
     {
+      data: null,
       time: '17:00',
       booked: false
     }
@@ -163,36 +198,27 @@ export class DayComponent implements OnInit, OnChanges {
 
   constructor(
     private http: HttpClient,
-    private roomService: RoomService) { }
+    private roomService: RoomService,
+    private timeslotService: TimeslotService) { }
 
   ngOnInit() {
-    this.displayDate = new Date(this.displayDate).toLocaleDateString('en-US', this.options);
-    this.roomService.displayDate = this.displayDate;
-    this.roomService.getRooms().subscribe(res => {
-      this.rooms = res.rooms;
-    }, (err: HttpErrorResponse) => {
-      if (err.error instanceof Error) {
-        console.log('Client-side error occured.');
-      } else {
-        console.log('Server-side error occured.');
-      }
-    });
-
-    this.reservations = this.roomService.reservations;
-
-    this.timeSlots.forEach(time => {
-      let booked = false;
-      this.reservations.forEach(reservation => {
-        reservation.reservation.scheduleDetails.forEach(item => {
-          if (time.time === item.startTime) {
-            booked = true;
-          } else if (time.time === item.endTime) {
-            booked = false;
+    let booked = false;
+    this.reservation.reservation.scheduleDetails.forEach(item => {
+      this.timeSlots.forEach(time => {
+        if (time.time === item.startTime) {
+          booked = true;
+        } else if (time.time === item.endTime) {
+          booked = false;
+        }
+        if (time.booked !== true) {
+          if (booked === true) {
+            time['data'] = item;
           }
           time.booked = booked;
-        });
+        }
       });
     });
+
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -201,19 +227,20 @@ export class DayComponent implements OnInit, OnChanges {
         this.displayDate = new Date(this.displayDate).toLocaleDateString('en-US', this.options);
       } else if (propName === 'reservations') {
 
-        // TODO - change this to flip it upside down
-        this.reservations = this.roomService.reservations;
-        this.timeSlots.forEach(time => {
-          let booked = false;
-          this.reservations.forEach(reservation => {
-            reservation.reservation.scheduleDetails.forEach(item => {
-              if (time.time === item.startTime) {
-                booked = true;
-              } else if (time.time === item.endTime) {
-                booked = false;
+        let booked = false;
+        this.reservation.reservation.scheduleDetails.forEach(item => {
+          this.timeSlots.forEach(time => {
+            if (time.time === item.startTime) {
+              booked = true;
+            } else if (time.time === item.endTime) {
+              booked = false;
+            }
+            if (time.booked !== true) {
+              if (booked === true) {
+                time['data'] = item;
               }
               time.booked = booked;
-            });
+            }
           });
         });
       }
@@ -221,9 +248,11 @@ export class DayComponent implements OnInit, OnChanges {
   }
 
   collectData(event) {
+
     this.roomService.room = event.room;
     this.roomService.startTime = event.time;
+    this.timeslotService.booked = event.booked;
+    this.timeslotService.id = event.id;
     this.roomSelected.emit(true);
-    // this.showModal = !this.showModal;
   }
 }

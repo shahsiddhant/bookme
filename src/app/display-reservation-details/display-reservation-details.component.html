@@ -1,0 +1,28 @@
+<div class="modal-container">
+  <div class="modal">
+    <div class="close" (click)="modalClose()">X</div>
+
+    <div class="description">
+      <div class="owner">Owner:
+        <strong> {{reservationDetails.owner}} </strong>
+      </div>
+      <div> Room:
+        <strong>{{reservationDetails.room}}</strong>
+      </div>
+      <div> Description
+        <strong> {{reservationDetails.desc}}</strong>
+      </div>
+    </div>
+
+    <div class="date">
+      <div>{{reservationDetails.startTime | date:'fullDate'}}</div>
+      <div>{{reservationDetails.startTime | date:'shortTime'}} - {{reservationDetails.endTime | date:'shortTime'}}</div>
+    </div>
+
+    <button class="delete" (click)="deleteReservation()">Delete</button>
+    <div class="error-message" *ngIf="showErrorMessage">
+      Error occoured, Please try again:
+      <strong> {{errorMessage}}</strong>
+    </div>
+  </div>
+</div>

@@ -1,33 +1,33 @@
 app-day {
-    width: 100%;
-    font-family: Helvetica, sans-serif;
-    font-weight: 100;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
 }
+
 .left-pane {
-    width: 13%;
-    display: inline-block;
-    height: 100%;
-    padding: 30px;
+  width: 13%;
+  display: inline-block;
+  height: 100%;
+  padding: 30px;
 }
+
 .right-pane {
-    width: 87%;
-    display: inline-block;
-    position: absolute;
-    padding: 30px;
-
+  width: 81%;
+  display: inline-block;
+  position: absolute;
+  padding: 30px;
 }
 
-.book-me{
-    background: none;
-    background-color: #00DF73;
-    color: #fff;
-    border: 0;
-    border-radius: 30px;
-    font-size: 15px;
-    padding: 10px 20px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    box-shadow: 3px 3px 8px #666;
+.title {
+  font-size: 25px;
+  font-family: sans-serif;
 }
 
+.day-container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.room-container {
+  display: inline;
+}

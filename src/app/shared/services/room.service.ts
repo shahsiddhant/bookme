@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
-import { RequestOptions } from 'http';
 
 
 @Injectable()
@@ -32,7 +31,6 @@ export class RoomService {
       'room': this.room,
       'desc': this.desc
     };
-    console.log(body);
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     headers.append('', 'text');
     return this.httpClient.post(path, body, { headers, responseType: 'text' });
@@ -49,5 +47,16 @@ export class RoomService {
     const path = this.baseUrl + `/schedule/${room}/date/${date}`;
     const headers = new HttpHeaders().set('Accept', 'application/json');
     return this.httpClient.get(path, { headers });
+  }
+
+  getReservationDetails(id): Observable<any> {
+    const path = this.baseUrl + `/reservation/${id}`;
+    const headers = new HttpHeaders().set('Accept', 'application/json');
+    return this.httpClient.get(path, { headers });
+  }
+
+  deleteReservation(id): Observable<any> {
+    const path = this.baseUrl + `/reservation/${id}`;
+    return this.httpClient.delete(path, { responseType: 'text' });
   }
 }

@@ -115,10 +115,8 @@ export class SaveFormComponent implements OnInit {
   ];
   public desc: string = null;
   public displayDate;
-  private options = {
-    weekday: 'long', year: 'numeric', month: 'short',
-    day: 'numeric'
-  };
+  public errorMessage = null;
+  public showErrorMessage = false;
 
   descriptionControl = new FormControl('', [Validators.required]);
   startControl = new FormControl('', [Validators.required]);
@@ -135,13 +133,17 @@ export class SaveFormComponent implements OnInit {
   }
 
   saveInfo() {
-
+    this.showErrorMessage = false;
     this.roomService.desc = this.desc;
     this.roomService.endTime = this.endTime;
     this.roomService.startTime = this.startTime;
     this.roomService.postMeeting().subscribe(res => {
-      console.log(res);
+
       this.closeModal.emit(false);
+    }, err => {
+
+      this.showErrorMessage = true;
+      this.errorMessage = err.error;
     });
   }
 }

@@ -1,8 +1,8 @@
 .timeslot-grey {
   height: 100%;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   background-color: #DDDDDD;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   text-align: left;
 }
 

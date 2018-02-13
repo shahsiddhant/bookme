@@ -9,7 +9,7 @@ export class TimeslotComponent implements OnInit {
   @Input() metaData;
   @Input() room;
   @Input() booked;
-  @Output() selected: EventEmitter<any> = new EventEmitter();;
+  @Output() selected: EventEmitter<any> = new EventEmitter();
   public showModal: boolean;
   constructor() { }
 
@@ -18,12 +18,15 @@ export class TimeslotComponent implements OnInit {
 
   timeslotClicked() {
     // emit the metadata to the parent back to use
+
+
     const data = {
       'room': this.room,
-      'time': this.metaData.time
+      'time': this.metaData.time,
+      'booked': this.metaData.booked,
+      'id': this.metaData.data ? this.metaData.data.id : null
     };
     this.selected.emit(data);
-    // console.log(this.room);
 
   }
 }
