@@ -28,7 +28,7 @@ export class RoomService {
       'owner': this.cookieService.get('firstName') + ' ' + this.cookieService.get('lastName'),
       'startTime': new Date(this.date + ' ' + this.startTime).toISOString(),
       'endTime': new Date(this.date + ' ' + this.endTime).toISOString(),
-      'room': this.room,
+      'room': this.room.toString(),
       'desc': this.desc
     };
     const headers = new HttpHeaders().set('Content-Type', 'application/json');

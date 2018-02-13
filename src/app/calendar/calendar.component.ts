@@ -80,15 +80,22 @@ export class CalendarComponent implements OnInit {
       this.roomService.getReservationsByRoomByDate(room, this.roomService.date).subscribe(res => {
         this.reservation = new Schedule(res);
         this.reservations.push({
-          'room': room,
+          'room': parseInt(room, 10),
           'reservation': this.reservation
         });
         this.roomService.reservations.push({
-          'room': room,
+          'room': parseInt(room, 10),
           'reservation': this.reservation
         });
-        this.dataLoaded = this.reservations.length === this.rooms.length;
+        if (this.reservations.length === this.rooms.length) {
+
+          this.reservations.sort((a, b) => {
+            return a.room - b.room;
+          });
+          this.dataLoaded = true;
+        }
       });
     });
+
   }
 }
