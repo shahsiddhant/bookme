@@ -1,4 +1,5 @@
-.modal-container, .delete-confirmation {
+.modal-container,
+.delete-confirmation {
   font-family: sans-serif;
   position: fixed;
   top: 0;
@@ -8,7 +9,8 @@
   background: rgba(50, 50, 50, 0.7);
 }
 
-.modal, .question {
+.modal,
+.question {
   margin: 30vh auto;
   width: 400px;
   border-radius: 5px;
@@ -22,7 +24,8 @@
   cursor: pointer;
 }
 
-.delete, .yes {
+.delete,
+.yes {
   background: none;
   background-color: red;
   color: #fff;
@@ -34,8 +37,14 @@
   margin-bottom: 20px;
 }
 
+.delete:hover,
+.yes:hover {
+  background-color: #c60000;
+  cursor: pointer;
+}
+
 .no {
-    background: none;
+  background: none;
   background-color: green;
   color: #fff;
   border: 0;
@@ -44,6 +53,11 @@
   padding: 10px 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.no:hover {
+  background-color: darkgreen;
+  cursor: pointer;
 }
 
 .description {

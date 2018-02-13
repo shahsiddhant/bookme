@@ -28,6 +28,11 @@
   margin-bottom: 20px;
 }
 
+.save:hover {
+  background-color: #2185ff;
+  cursor: pointer;
+}
+
 .time-selectors {
     display: inline-block;
 }
