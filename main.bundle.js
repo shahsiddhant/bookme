@@ -286,7 +286,9 @@ var CalendarComponent = /** @class */ (function () {
             }
         }
         else {
-            this.updateReservations();
+            if (event !== true) {
+                this.updateReservations();
+            }
             this.showNotBookedModal = event;
         }
         this.startTime = this.roomService.startTime;
@@ -349,7 +351,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/day/day.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"room-coloumn\">\n  <span class=\"room-number\">{{reservation.room}}</span>\n  <div class=\"timeslot\" *ngFor=\"let timeslot of timeSlots\">\n    <app-timeslot [booked]='timeslot.booked' (selected)=\"collectData($event)\" [room]=\"reservation.room\" [metaData]=\"timeslot\"></app-timeslot>\n  </div>\n</div>\n"
+module.exports = "<div class=\"room-coloumn\">\n  <span class=\"room-number\">Room {{reservation.room}}</span>\n  <div class=\"timeslot\" *ngFor=\"let timeslot of timeSlots\">\n    <app-timeslot [booked]='timeslot.booked' (selected)=\"collectData($event)\" [room]=\"reservation.room\" [metaData]=\"timeslot\"></app-timeslot>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -654,7 +656,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".modal-container, .delete-confirmation {\n  font-family: sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background: rgba(50, 50, 50, 0.7);\n}\n\n.modal, .question {\n  margin: 30vh auto;\n  width: 400px;\n  border-radius: 5px;\n  padding: 30px;\n  background: #f9f9f9;\n}\n\n.close {\n  width: 100%;\n  text-align: right;\n  cursor: pointer;\n}\n\n.delete, .yes {\n  background: none;\n  background-color: red;\n  color: #fff;\n  border: 0;\n  border-radius: 30px;\n  font-size: 15px;\n  padding: 10px 20px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n\n.no {\n    background: none;\n  background-color: green;\n  color: #fff;\n  border: 0;\n  border-radius: 30px;\n  font-size: 15px;\n  padding: 10px 20px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n\n.description {\n  margin: 10px 0;\n}\n\n.error-message {\n  color: red;\n}\n", ""]);
+exports.push([module.i, ".modal-container,\n.delete-confirmation {\n  font-family: sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background: rgba(50, 50, 50, 0.7);\n}\n\n.modal,\n.question {\n  margin: 30vh auto;\n  width: 400px;\n  border-radius: 5px;\n  padding: 30px;\n  background: #f9f9f9;\n}\n\n.close {\n  width: 100%;\n  text-align: right;\n  cursor: pointer;\n}\n\n.delete,\n.yes {\n  background: none;\n  background-color: red;\n  color: #fff;\n  border: 0;\n  border-radius: 30px;\n  font-size: 15px;\n  padding: 10px 20px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n\n.delete:hover,\n.yes:hover {\n  background-color: #c60000;\n  cursor: pointer;\n}\n\n.no {\n  background: none;\n  background-color: green;\n  color: #fff;\n  border: 0;\n  border-radius: 30px;\n  font-size: 15px;\n  padding: 10px 20px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n\n.no:hover {\n  background-color: darkgreen;\n  cursor: pointer;\n}\n\n.description {\n  margin: 10px 0;\n}\n\n.error-message {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -758,7 +760,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".save-modal {\n  font-family: sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background: rgba(50, 50, 50, 0.7);\n}\n\n.form-container {\n  margin: 30vh auto;\n  width: 400px;\n  border-radius: 5px;\n  padding: 30px;\n  background: #f9f9f9;\n}\n\n.save {\n  background: none;\n  background-color: #4F9DFB;\n  color: #fff;\n  border: 0;\n  border-radius: 30px;\n  font-size: 15px;\n  padding: 10px 20px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n\n.time-selectors {\n    display: inline-block;\n}\n\n.close {\n  width: 100%;\n  text-align: right;\n  cursor: pointer;\n}\n\n.error-message {\n  color: red;\n}\n", ""]);
+exports.push([module.i, ".save-modal {\n  font-family: sans-serif;\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background: rgba(50, 50, 50, 0.7);\n}\n\n.form-container {\n  margin: 30vh auto;\n  width: 400px;\n  border-radius: 5px;\n  padding: 30px;\n  background: #f9f9f9;\n}\n\n.save {\n  background: none;\n  background-color: #4F9DFB;\n  color: #fff;\n  border: 0;\n  border-radius: 30px;\n  font-size: 15px;\n  padding: 10px 20px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n\n.save:hover {\n  background-color: #2185ff;\n  cursor: pointer;\n}\n\n.time-selectors {\n    display: inline-block;\n}\n\n.close {\n  width: 100%;\n  text-align: right;\n  cursor: pointer;\n}\n\n.error-message {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -771,7 +773,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/save-form/save-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"save-modal\">\n  <div class=\"form-container\">\n    <div class=\"close\" (click)=\"modalClose()\">X</div>\n    <h3 class=\"m-0\">Book meeting for</h3>\n    <h2 class=\"m-0\"> {{displayDate}}</h2>\n    <mat-form-field>\n      <input matInput type=\"text\" placeholder=\"Description\" [(ngModel)]=\"desc\" [formControl]=\"descriptionControl\" required>\n      <mat-error *ngIf=\"descriptionControl.hasError('required')\">You must enter something</mat-error>\n    </mat-form-field>\n\n    <div class=\"time-selectors\">\n      <mat-form-field>\n        <mat-select placeholder=\"Start Time\" [(ngModel)]=\"startTime\" [formControl]=\"startControl\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"startControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n\n      <mat-form-field>\n        <mat-select placeholder=\"End Time\" [formControl]=\"endControl\" [(ngModel)]=\"endTime\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"endControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n    </div>\n    <button class=\"save\" (click)=\"saveInfo()\">Save</button>\n    <div class=\"error-message\" *ngIf=\"showErrorMessage\">\n      Error occoured, Please try again: {{errorMessage}}\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"save-modal\">\n  <div class=\"form-container\">\n    <div class=\"close\" (click)=\"modalClose()\">X</div>\n    <h3 class=\"m-0\">Book meeting for Room {{room}} on</h3>\n    <h2 class=\"m-0\"> {{displayDate}}</h2>\n    <mat-form-field>\n      <input matInput type=\"text\" placeholder=\"Description\" [(ngModel)]=\"desc\" [formControl]=\"descriptionControl\" required>\n      <mat-error *ngIf=\"descriptionControl.hasError('required')\">You must enter something</mat-error>\n    </mat-form-field>\n\n    <div class=\"time-selectors\">\n      <mat-form-field>\n        <mat-select placeholder=\"Start Time\" [(ngModel)]=\"startTime\" [formControl]=\"startControl\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"startControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n\n      <mat-form-field>\n        <mat-select placeholder=\"End Time\" [formControl]=\"endControl\" [(ngModel)]=\"endTime\" required>\n          <mat-option *ngFor=\"let time of timeSlots\" [value]=\"time.time\">\n            {{ time.time }}\n          </mat-option>\n        </mat-select>\n        <mat-error *ngIf=\"endControl.hasError('required')\">You must make a selection</mat-error>\n      </mat-form-field>\n    </div>\n    <button class=\"save\" (click)=\"saveInfo()\">Save</button>\n    <div class=\"error-message\" *ngIf=\"showErrorMessage\">\n      Error occoured, Please try again: {{errorMessage}}\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -911,6 +913,7 @@ var SaveFormComponent = /** @class */ (function () {
     SaveFormComponent.prototype.ngOnInit = function () {
         this.endTime = this.startTime;
         this.displayDate = this.roomService.displayDate;
+        this.room = this.roomService.room;
     };
     SaveFormComponent.prototype.modalClose = function () {
         this.closeModal.emit(false);
