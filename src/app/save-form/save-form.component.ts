@@ -117,6 +117,7 @@ export class SaveFormComponent implements OnInit {
   public displayDate;
   public errorMessage = null;
   public showErrorMessage = false;
+  public room;
 
   descriptionControl = new FormControl('', [Validators.required]);
   startControl = new FormControl('', [Validators.required]);
@@ -127,6 +128,7 @@ export class SaveFormComponent implements OnInit {
   ngOnInit() {
     this.endTime = this.startTime;
     this.displayDate = this.roomService.displayDate;
+    this.room = this.roomService.room;
   }
   modalClose() {
     this.closeModal.emit(false);

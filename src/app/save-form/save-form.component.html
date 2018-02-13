@@ -1,7 +1,7 @@
 <div class="save-modal">
   <div class="form-container">
     <div class="close" (click)="modalClose()">X</div>
-    <h3 class="m-0">Book meeting for</h3>
+    <h3 class="m-0">Book meeting for Room {{room}} on</h3>
     <h2 class="m-0"> {{displayDate}}</h2>
     <mat-form-field>
       <input matInput type="text" placeholder="Description" [(ngModel)]="desc" [formControl]="descriptionControl" required>

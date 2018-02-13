@@ -65,13 +65,14 @@ export class CalendarComponent implements OnInit {
         this.showBookedModal = event;
       }
     } else {
-      this.updateReservations();
+      if (event !== true) {
+        this.updateReservations();
+      }
       this.showNotBookedModal = event;
     }
 
     this.startTime = this.roomService.startTime;
   }
-
 
   updateReservations() {
     this.reservations = [];
