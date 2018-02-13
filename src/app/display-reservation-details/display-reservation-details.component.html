@@ -19,10 +19,19 @@
       <div>{{reservationDetails.startTime | date:'shortTime'}} - {{reservationDetails.endTime | date:'shortTime'}}</div>
     </div>
 
-    <button class="delete" (click)="deleteReservation()">Delete</button>
+    <button class="delete" (click)="showConfirmationModal()">Delete</button>
     <div class="error-message" *ngIf="showErrorMessage">
       Error occoured, Please try again:
       <strong> {{errorMessage}}</strong>
     </div>
+
+    <div class="delete-confirmation" *ngIf="showConfirmation">
+      <div class="question">
+        <div> Are you sure you want to delete this reservation?</div>
+        <button class="yes" (click)="deleteReservation()">Yes</button>
+        <button class="no" (click)="closeConfirmation()">No</button>
+      </div>
+    </div>
+
   </div>
 </div>

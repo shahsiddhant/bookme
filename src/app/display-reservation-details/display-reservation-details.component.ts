@@ -10,6 +10,7 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
 export class DisplayReservationDetailsComponent implements OnInit {
   @Output() closeModal: EventEmitter<any> = new EventEmitter();
   @Input() reservationDetails;
+  public showConfirmation = false;
   public showErrorMessage = false;
   public errorMessage: string;
   constructor(private roomService: RoomService, private cookieService: CookieService) { }
@@ -19,20 +20,27 @@ export class DisplayReservationDetailsComponent implements OnInit {
   modalClose() {
     this.closeModal.emit(false);
   }
-  deleteReservation() {
+  showConfirmationModal() {
     const cookieName = this.cookieService.get('firstName') + ' ' + this.cookieService.get('lastName');
     if (cookieName === this.reservationDetails.owner) {
-      this.roomService.deleteReservation(this.reservationDetails.id).subscribe(res => {
-        this.closeModal.emit(false);
-      }, err => {
-        this.showErrorMessage = true;
-        this.errorMessage = err.error;
-      });
+      this.showConfirmation = true;
     } else {
       this.showErrorMessage = true;
       this.errorMessage = 'You cannot delete this reservation if you are not the owner';
     }
 
+  }
 
+  deleteReservation() {
+    this.roomService.deleteReservation(this.reservationDetails.id).subscribe(res => {
+      this.closeModal.emit(false);
+    }, err => {
+      this.showErrorMessage = true;
+      this.errorMessage = err.error;
+    });
+  }
+
+  closeConfirmation() {
+    this.showConfirmation = false;
   }
 }
