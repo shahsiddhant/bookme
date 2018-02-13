@@ -1,38 +1,55 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DayComponent } from './day/day.component';
-
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { SaveFormComponent } from './save-form/save-form.component';
+import { TimeAxisComponent } from './time-axis/time-axis.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule, MatNativeDateModule, MatInputModule, MatSelectModule, MatButtonModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { TimeslotComponent } from './timeslot/timeslot.component';
+import { RoomService } from './shared/services/room.service';
+import { TimeslotService } from './shared/services/timeslot.service';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { StartPromptComponent } from './start-prompt/start-prompt.component';
+import { DisplayReservationDetailsComponent } from './display-reservation-details/display-reservation-details.component';
 
-var config = {
-  apiKey: "AIzaSyA8Ll1OmnuAzctmhfkxe3Xkze7lfaACAsQ",
-  authDomain: "bookme-11e75.firebaseapp.com",
-  databaseURL: "https://bookme-11e75.firebaseio.com",
-  projectId: "bookme-11e75",
-  storageBucket: "bookme-11e75.appspot.com",
-  messagingSenderId: "1007201102083"
-};
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
     DayComponent,
-    SaveFormComponent
+    SaveFormComponent,
+    TimeAxisComponent,
+    TimeslotComponent,
+    StartPromptComponent,
+    DisplayReservationDetailsComponent
+  ],
+  exports: [
+    MatDatepickerModule
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(config),
-    AngularFirestoreModule,
-    HttpClientModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    // AngularFirestoreModule,
+    HttpClientModule,
+    MatSelectModule,
+    MatButtonModule
+
   ],
-  providers: [],
+  providers: [RoomService, CookieService, TimeslotService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

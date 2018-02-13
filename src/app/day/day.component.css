@@ -1,40 +1,30 @@
-
-.calendar-container{
-    display: flex;
-    width: 100%;
-}
-
-.day-container {
-    border-right: 1px solid #666;
-    text-align: center;
-    width: 20%;
-}
-
-.room-container {
-    display: flex;
-    width: 100%;
-}
-
-.room-coloumn{
-    background: #fff;
-    width: 20%;
-    border-right: 1px solid #eeeeee;
-    height: 100%;
-    font-size: 14px;
+.room-coloumn {
+  /* background: red; */
+  text-align: center;
+  display: inline-block;
+  width: 18%;
+  padding: 10px;
+  border-right: 1px solid #eeeeee;
+  height: 100%;
+  font-size: 14px;
 }
 
 .timeslot {
-    width: 100%;
-    height: 40px;
-    padding: 0;
-    background-color: #DDDDDD;
-    border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: #DDDDDD;
+  border-bottom: 1px solid #ccc;
 }
 
 .timeslot:hover {
-    opacity: .8;
-}
-.booked {
-    background: #6A8EFE;
+  opacity: .8;
 }
 
+.booked {
+  background: #6A8EFE;
+}
+
+.room-number {
+  font-size: 20px;
+}

@@ -1,0 +1,11 @@
+.timeslot-grey {
+  height: 100%;
+  /* margin-top: 10px; */
+  background-color: #DDDDDD;
+  /* border: 1px solid #ccc; */
+  text-align: left;
+}
+
+.booked {
+  background-color: lightblue;
+}

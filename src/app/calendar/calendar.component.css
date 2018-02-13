@@ -1,98 +1,33 @@
 app-day {
-    width: 100%;
-    font-family: Helvetica, sans-serif;
-    font-weight: 100;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
 }
+
 .left-pane {
-    width: 10%;
-    display: inline-block;
-    height: 100%;
+  width: 13%;
+  display: inline-block;
+  height: 100%;
+  padding: 30px;
 }
+
 .right-pane {
-    width: 90%;
-    display: inline-block;
-    position: absolute;
-}
-.date-input input {
-    width: 90%;
-    height: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-}
-.time-axis {
-    width: 100%;
-    display: inline-block;
-}
-.time-stamp {
-    height: 30px;
-    padding-top: 10px;
-    widows: 100%;
-    border-bottom: 1px solid #cccccc;
-}
-.hour {
-    border-top: 1px solid #333;
+  width: 81%;
+  display: inline-block;
+  position: absolute;
+  padding: 30px;
 }
 
-.book-me{
-    background: none;
-    background-color: #00DF73;
-    color: #fff;
-    border: 0;
-    border-radius: 30px;
-    font-size: 15px;
-    padding: 10px 20px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    box-shadow: 3px 3px 8px #666;
+.title {
+  font-size: 25px;
+  font-family: sans-serif;
 }
 
-.save {
-    background: none;
-    background-color: #4F9DFB;
-    color: #fff;
-    border: 0;
-    border-radius: 30px;
-    font-size: 15px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.day-container {
+  width: 100%;
+  margin-top: 10px;
 }
 
-.save-modal {
-    font-family: sans-serif;
-    position: absolute;
-    margin: auto;
-    padding: 10px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 17%;
-    height: 27%;
-    background: #f9f9f9;
-    border-radius: 6px;
-    width: 300px;
-    height: 200px;
-    padding: 30px;
-    box-shadow: 3px 3px 8px #999;
-}
-
-.form-container {
-    margin: 0 auto;
-}
-
-.save-modal label,
-.save-modal input {
-    margin: 10px 0;
-    display: block;
-}
-
-.save-modal input {
-    padding: 10px;
-}
-
-#description{
-    width: 230px;
-    height: 60px;
+.room-container {
+  display: inline;
 }
