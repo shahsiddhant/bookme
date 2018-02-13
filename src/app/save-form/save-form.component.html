@@ -4,7 +4,7 @@
     <h3 class="m-0">Book meeting for Room {{room}} on</h3>
     <h2 class="m-0"> {{displayDate}}</h2>
     <mat-form-field>
-      <input matInput maxlength="30" type="text" placeholder="Description" [(ngModel)]="desc" [formControl]="descriptionControl" required>
+      <input matInput type="text" placeholder="Description" [(ngModel)]="desc" [formControl]="descriptionControl" required>
       <mat-error *ngIf="descriptionControl.hasError('required')">You must enter something</mat-error>
     </mat-form-field>
 
