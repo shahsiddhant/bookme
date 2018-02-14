@@ -399,6 +399,46 @@ var DayComponent = /** @class */ (function () {
         this.timeSlots = [
             {
                 data: null,
+                time: '7:00',
+                booked: false
+            },
+            {
+                data: null,
+                time: '7:15',
+                booked: false
+            },
+            {
+                data: null,
+                time: '7:30',
+                booked: false
+            },
+            {
+                data: null,
+                time: '7:45',
+                booked: false
+            },
+            {
+                data: null,
+                time: '8:00',
+                booked: false
+            },
+            {
+                data: null,
+                time: '8:15',
+                booked: false
+            },
+            {
+                data: null,
+                time: '8:30',
+                booked: false
+            },
+            {
+                data: null,
+                time: '8:45',
+                booked: false
+            },
+            {
+                data: null,
                 time: '9:00',
                 booked: false
             },
@@ -560,6 +600,41 @@ var DayComponent = /** @class */ (function () {
             {
                 data: null,
                 time: '17:00',
+                booked: false
+            },
+            {
+                data: null,
+                time: '17:15',
+                booked: false
+            },
+            {
+                data: null,
+                time: '17:30',
+                booked: false
+            },
+            {
+                data: null,
+                time: '17:45',
+                booked: false
+            },
+            {
+                data: null,
+                time: '18:00',
+                booked: false
+            },
+            {
+                data: null,
+                time: '18:15',
+                booked: false
+            },
+            {
+                data: null,
+                time: '18:30',
+                booked: false
+            },
+            {
+                data: null,
+                time: '18:45',
                 booked: false
             }
         ];
@@ -1210,7 +1285,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/time-axis/time-axis.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"time-axis\">\n  <div class=\"time-stamp hour\">9:00</div>\n  <div class=\"time-stamp\">9:15</div>\n  <div class=\"time-stamp\">9:30</div>\n  <div class=\"time-stamp\">9:45</div>\n  <div class=\"time-stamp hour\">10:00</div>\n  <div class=\"time-stamp\">10:15</div>\n  <div class=\"time-stamp\">10:30</div>\n  <div class=\"time-stamp\">10:45</div>\n  <div class=\"time-stamp hour\">11:00</div>\n  <div class=\"time-stamp\">11:15</div>\n  <div class=\"time-stamp\">11:30</div>\n  <div class=\"time-stamp\">11:45</div>\n  <div class=\"time-stamp hour\">12:00</div>\n  <div class=\"time-stamp\">12:15</div>\n  <div class=\"time-stamp\">12:30</div>\n  <div class=\"time-stamp\">12:45</div>\n  <div class=\"time-stamp hour\">1:00</div>\n  <div class=\"time-stamp\">1:15</div>\n  <div class=\"time-stamp\">1:30</div>\n  <div class=\"time-stamp\">1:45</div>\n  <div class=\"time-stamp hour\">2:00</div>\n  <div class=\"time-stamp\">2:15</div>\n  <div class=\"time-stamp\">2:30</div>\n  <div class=\"time-stamp\">2:45</div>\n  <div class=\"time-stamp hour\">3:00</div>\n  <div class=\"time-stamp\">3:15</div>\n  <div class=\"time-stamp\">3:30</div>\n  <div class=\"time-stamp\">3:45</div>\n  <div class=\"time-stamp hour\">4:00</div>\n  <div class=\"time-stamp\">4:15</div>\n  <div class=\"time-stamp\">4:30</div>\n  <div class=\"time-stamp\">4:45</div>\n  <div class=\"time-stamp hour\">5:00</div>\n</div>\n"
+module.exports = "<div class=\"time-axis\">\n  <div class=\"time-stamp hour\">7:00</div>\n  <div class=\"time-stamp\">7:15</div>\n  <div class=\"time-stamp\">7:30</div>\n  <div class=\"time-stamp\">7:45</div>\n  <div class=\"time-stamp hour\">8:00</div>\n  <div class=\"time-stamp\">8:15</div>\n  <div class=\"time-stamp\">8:30</div>\n  <div class=\"time-stamp\">8:45</div>\n  <div class=\"time-stamp hour\">9:00</div>\n  <div class=\"time-stamp\">9:15</div>\n  <div class=\"time-stamp\">9:30</div>\n  <div class=\"time-stamp\">9:45</div>\n  <div class=\"time-stamp hour\">10:00</div>\n  <div class=\"time-stamp\">10:15</div>\n  <div class=\"time-stamp\">10:30</div>\n  <div class=\"time-stamp\">10:45</div>\n  <div class=\"time-stamp hour\">11:00</div>\n  <div class=\"time-stamp\">11:15</div>\n  <div class=\"time-stamp\">11:30</div>\n  <div class=\"time-stamp\">11:45</div>\n  <div class=\"time-stamp hour\">12:00</div>\n  <div class=\"time-stamp\">12:15</div>\n  <div class=\"time-stamp\">12:30</div>\n  <div class=\"time-stamp\">12:45</div>\n  <div class=\"time-stamp hour\">1:00</div>\n  <div class=\"time-stamp\">1:15</div>\n  <div class=\"time-stamp\">1:30</div>\n  <div class=\"time-stamp\">1:45</div>\n  <div class=\"time-stamp hour\">2:00</div>\n  <div class=\"time-stamp\">2:15</div>\n  <div class=\"time-stamp\">2:30</div>\n  <div class=\"time-stamp\">2:45</div>\n  <div class=\"time-stamp hour\">3:00</div>\n  <div class=\"time-stamp\">3:15</div>\n  <div class=\"time-stamp\">3:30</div>\n  <div class=\"time-stamp\">3:45</div>\n  <div class=\"time-stamp hour\">4:00</div>\n  <div class=\"time-stamp\">4:15</div>\n  <div class=\"time-stamp\">4:30</div>\n  <div class=\"time-stamp\">4:45</div>\n  <div class=\"time-stamp hour\">5:00</div>\n  <div class=\"time-stamp\">5:15</div>\n  <div class=\"time-stamp\">5:30</div>\n  <div class=\"time-stamp\">5:45</div>\n  <div class=\"time-stamp hour\">6:00</div>\n  <div class=\"time-stamp\">6:15</div>\n  <div class=\"time-stamp\">6:30</div>\n  <div class=\"time-stamp\">6:45</div>\n</div>\n"
 
 /***/ }),
 
