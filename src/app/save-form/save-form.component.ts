@@ -13,6 +13,30 @@ export class SaveFormComponent implements OnInit {
   public endTime = null;
   public timeSlots = [
     {
+      time: '07:00'
+    },
+    {
+      time: '07:15'
+    },
+    {
+      time: '07:30'
+    },
+    {
+      time: '07:45'
+    },
+    {
+      time: '08:00'
+    },
+    {
+      time: '08:15'
+    },
+    {
+      time: '08:30'
+    },
+    {
+      time: '08:45'
+    },
+    {
       time: '09:00'
     },
     {
@@ -111,6 +135,28 @@ export class SaveFormComponent implements OnInit {
     {
       time: '17:00'
 
+    },
+    {
+      time: '17:15'
+    },
+    {
+      time: '17:30'
+    },
+    {
+      time: '17:45'
+    },
+    {
+      time: '18:00'
+
+    },
+    {
+      time: '18:15'
+    },
+    {
+      time: '18:30'
+    },
+    {
+      time: '18:45'
     }
   ];
   public desc: string = null;
