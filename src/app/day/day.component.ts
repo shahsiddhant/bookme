@@ -28,6 +28,48 @@ export class DayComponent implements OnInit, OnChanges {
   public timeSlots = [
     {
       data: null,
+      time: '7:00',
+      booked: false
+
+    },
+    {
+      data: null,
+      time: '7:15',
+      booked: false
+    },
+    {
+      data: null,
+      time: '7:30',
+      booked: false
+    },
+    {
+      data: null,
+      time: '7:45',
+      booked: false
+    },
+    {
+      data: null,
+      time: '8:00',
+      booked: false
+
+    },
+    {
+      data: null,
+      time: '8:15',
+      booked: false
+    },
+    {
+      data: null,
+      time: '8:30',
+      booked: false
+    },
+    {
+      data: null,
+      time: '8:45',
+      booked: false
+    },
+    {
+      data: null,
       time: '9:00',
       booked: false
 
@@ -190,6 +232,41 @@ export class DayComponent implements OnInit, OnChanges {
     {
       data: null,
       time: '17:00',
+      booked: false
+    },
+    {
+      data: null,
+      time: '17:15',
+      booked: false
+    },
+    {
+      data: null,
+      time: '17:30',
+      booked: false
+    },
+    {
+      data: null,
+      time: '17:45',
+      booked: false
+    },
+    {
+      data: null,
+      time: '18:00',
+      booked: false
+    },
+    {
+      data: null,
+      time: '18:15',
+      booked: false
+    },
+    {
+      data: null,
+      time: '18:30',
+      booked: false
+    },
+    {
+      data: null,
+      time: '18:45',
       booked: false
     }
   ];
