@@ -192,7 +192,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-day {\n  width: 100%;\n  font-family: Helvetica, sans-serif;\n  font-weight: 100;\n}\n\n.left-pane {\n  width: 13%;\n  display: inline-block;\n  height: 100%;\n  padding: 30px;\n}\n\n.right-pane {\n  width: 81%;\n  display: inline-block;\n  position: absolute;\n  padding: 30px;\n}\n\n.title {\n  font-size: 25px;\n  font-family: sans-serif;\n}\n\n.day-container {\n  width: 100%;\n  margin-top: 10px;\n}\n\n.room-container {\n  display: inline;\n}\n", ""]);
+exports.push([module.i, "app-day {\n  width: 100%;\n  font-family: Helvetica, sans-serif;\n  font-weight: 100;\n}\n\n.left-pane {\n  width: 13%;\n  display: inline-block;\n  height: 100%;\n  padding: 30px;\n}\n\n.right-pane {\n  width: 81%;\n  display: inline-block;\n  position: absolute;\n  padding: 30px;\n}\n\n.title {\n  font-size: 25px;\n  font-family: sans-serif;\n  text-align: center;\n}\n\n.day-container {\n  width: 100%;\n  margin-top: 10px;\n}\n\n.room-container {\n  display: inline;\n}\n", ""]);
 
 // exports
 
@@ -343,7 +343,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".room-coloumn {\n  /* background: red; */\n  text-align: center;\n  display: inline-block;\n  width: 18%;\n  padding: 10px;\n  border-right: 1px solid #eeeeee;\n  height: 100%;\n  font-size: 14px;\n}\n\n.timeslot {\n  width: 100%;\n  height: 50px;\n  margin-bottom: 10px;\n  background-color: #DDDDDD;\n  border-bottom: 1px solid #ccc;\n}\n\n.timeslot:hover {\n  opacity: .8;\n}\n\n.booked {\n  background: #6A8EFE;\n}\n\n.room-number {\n  font-size: 20px;\n}\n", ""]);
+exports.push([module.i, ".room-coloumn {\n  /* background: red; */\n  text-align: center;\n  display: inline-block;\n  width: 16%;\n  padding: 10px;\n  border-right: 1px solid #eeeeee;\n  height: 100%;\n  font-size: 14px;\n}\n\n.timeslot {\n  width: 100%;\n  height: 50px;\n  margin-bottom: 10px;\n  background-color: #DDDDDD;\n  border-bottom: 1px solid #ccc;\n}\n\n.timeslot:hover {\n  opacity: .8;\n}\n\n.booked {\n  background: #6A8EFE;\n}\n\n.room-number {\n  font-size: 20px;\n}\n", ""]);
 
 // exports
 
@@ -356,7 +356,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/day/day.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"room-coloumn\">\n  <span class=\"room-number\">Room {{reservation.room}}</span>\n  <div class=\"timeslot\" *ngFor=\"let timeslot of timeSlots\">\n    <app-timeslot [booked]='timeslot.booked' (selected)=\"collectData($event)\" [room]=\"reservation.room\" [metaData]=\"timeslot\"></app-timeslot>\n  </div>\n</div>\n"
+module.exports = "<div class=\"room-coloumn\">\n  <span class=\"room-number\">Room {{reservation.room}}</span>\n  <div class=\"timeslot\" *ngFor=\"let timeslot of timeSlots\">\n    <app-timeslot [booked]='timeslot.booked' (selected)=\"collectData($event)\" [room]=\"reservation.room\" [metaData]=\"timeslot\"></app-timeslot>\n  </div>\n  <span class=\"room-number\">Room {{reservation.room}}</span>\n</div>\n"
 
 /***/ }),
 
