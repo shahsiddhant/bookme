@@ -3,4 +3,5 @@
   <div class="timeslot" *ngFor="let timeslot of timeSlots">
     <app-timeslot [booked]='timeslot.booked' (selected)="collectData($event)" [room]="reservation.room" [metaData]="timeslot"></app-timeslot>
   </div>
+  <span class="room-number">Room {{reservation.room}}</span>
 </div>
