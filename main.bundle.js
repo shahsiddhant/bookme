@@ -243,7 +243,7 @@ var CalendarComponent = /** @class */ (function () {
         this.startTime = null;
         this.displayDate = null;
         // Get this from API
-        this.rooms = ['16101', '16103', '16113', '16303', '16313'];
+        this.rooms = ['16101', '16103', '16113', '16303', '16313', '16400', '16401'];
         this.reservations = null;
         this.dataLoaded = false;
         this.options = {
@@ -343,7 +343,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".room-coloumn {\n  /* background: red; */\n  text-align: center;\n  display: inline-block;\n  width: 16%;\n  padding: 10px;\n  border-right: 1px solid #eeeeee;\n  height: 100%;\n  font-size: 14px;\n}\n\n.timeslot {\n  width: 100%;\n  height: 50px;\n  margin-bottom: 10px;\n  background-color: #DDDDDD;\n  border-bottom: 1px solid #ccc;\n}\n\n.timeslot:hover {\n  opacity: .8;\n}\n\n.booked {\n  background: #6A8EFE;\n}\n\n.room-number {\n  font-size: 20px;\n}\n", ""]);
+exports.push([module.i, ".room-coloumn {\n  /* background: red; */\n  text-align: center;\n  display: inline-block;\n  width: 11%;\n  padding: 10px;\n  border-right: 1px solid #eeeeee;\n  height: 100%;\n  font-size: 14px;\n}\n\n.timeslot {\n  width: 100%;\n  height: 50px;\n  margin-bottom: 10px;\n  background-color: #DDDDDD;\n  border-bottom: 1px solid #ccc;\n  font-size: 10px\n}\n\n.timeslot:hover {\n  opacity: .8;\n}\n\n.booked {\n  background: #6A8EFE;\n}\n\n.room-number {\n  font-size: 20px;\n}\n", ""]);
 
 // exports
 
@@ -1248,7 +1248,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/start-prompt/start-prompt.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-container\">\n  <div class=\"modal\">\n    <h2>Please enter your name. </h2>\n    <p>This will be stored in a cookie and used for all future reservations.</p>\n    <form action=\"\">\n      <div class=\"inline\">\n        <mat-form-field>\n          <input matInput type=\"text\" placeholder=\"First Name\" [(ngModel)]=\"firstName\" [formControl]=\"firstNameControl\" required>\n          <mat-error *ngIf=\"firstNameControl.hasError('required')\">You must enter something</mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"text\" placeholder=\"Last Name\" [(ngModel)]=\"lastName\" [formControl]=\"lastNameControl\" required>\n          <mat-error *ngIf=\"lastNameControl.hasError('required')\">You must enter something</mat-error>\n        </mat-form-field>\n      </div>\n\n      <button type=\"submit\" value=\"Save\" class=\"save\" (click)=\"saveInfo()\">Save</button>\n    </form>\n  </div>\n</div>\n"
+module.exports = "<div class=\"modal-container\">\n  <div class=\"modal\">\n    <h1>Welcome to BookMe!</h1>\n    <h2>Please enter your name. </h2>\n    <p>This will be stored in a cookie and used for all future reservations.</p>\n    <form action=\"\">\n      <div class=\"inline\">\n        <mat-form-field>\n          <input matInput type=\"text\" placeholder=\"First Name\" [(ngModel)]=\"firstName\" [formControl]=\"firstNameControl\" required>\n          <mat-error *ngIf=\"firstNameControl.hasError('required')\">You must enter something</mat-error>\n        </mat-form-field>\n\n        <mat-form-field>\n          <input matInput type=\"text\" placeholder=\"Last Name\" [(ngModel)]=\"lastName\" [formControl]=\"lastNameControl\" required>\n          <mat-error *ngIf=\"lastNameControl.hasError('required')\">You must enter something</mat-error>\n        </mat-form-field>\n      </div>\n\n      <button type=\"submit\" value=\"Save\" class=\"save\" (click)=\"saveInfo()\">Save</button>\n    </form>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1378,7 +1378,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".timeslot-grey {\n  height: 100%;\n  /* margin-top: 10px; */\n  background-color: #DDDDDD;\n  /* border: 1px solid #ccc; */\n  text-align: left;\n}\n\n.booked {\n  background-color: lightblue;\n}\n", ""]);
+exports.push([module.i, ".timeslot-grey {\n  height: 100%;\n  /* margin-top: 10px; */\n  background-color: #DDDDDD;\n  /* border: 1px solid #ccc; */\n  text-align: left;\n}\n\n.booked {\n  background-color: lightblue;\n}\n\n.elipsis {\n  text-overflow: ellipsis;\n  /* Required for text-overflow to do anything */\n  white-space: nowrap;\n  overflow: hidden;\n}\n", ""]);
 
 // exports
 
@@ -1391,7 +1391,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/timeslot/timeslot.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"timeslot-grey\" [ngClass]=\"{booked: booked}\" (click)='timeslotClicked()'>\n  {{metaData.time}}\n  <div *ngIf=\"metaData.data\">{{metaData.data.owner}}</div>\n  <div *ngIf=\"metaData.data\">{{metaData.data.desc | slice:0:30}}</div>\n</div>\n"
+module.exports = "<div class=\"timeslot-grey\" [ngClass]=\"{booked: booked}\" (click)='timeslotClicked()'>\n  {{metaData.time}}\n  <div *ngIf=\"metaData.data\"><strong>{{metaData.data.owner}}</strong></div>\n  <div class=\"elipsis\" *ngIf=\"metaData.data\">{{metaData.data.desc}}</div>\n</div>\n"
 
 /***/ }),
 
