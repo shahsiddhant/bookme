@@ -1,5 +1,5 @@
 <div class="timeslot-grey" [ngClass]="{booked: booked}" (click)='timeslotClicked()'>
   {{metaData.time}}
-  <div *ngIf="metaData.data">{{metaData.data.owner}}</div>
-  <div *ngIf="metaData.data">{{metaData.data.desc | slice:0:30}}</div>
+  <div *ngIf="metaData.data"><strong>{{metaData.data.owner}}</strong></div>
+  <div class="elipsis" *ngIf="metaData.data">{{metaData.data.desc}}</div>
 </div>

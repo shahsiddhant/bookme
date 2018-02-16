@@ -20,7 +20,7 @@ export class CalendarComponent implements OnInit {
   public displayDate = null;
   constructor(private roomService: RoomService, public timeslotService: TimeslotService) { }
   // Get this from API
-  public rooms = ['16101', '16103', '16113', '16303', '16313'];
+  public rooms = ['16101', '16103', '16113', '16303', '16313', '16400', '16401'];
   public reservation: Schedule;
   public reservations = null;
   public dataLoaded = false;
